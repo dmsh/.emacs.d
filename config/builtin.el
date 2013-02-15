@@ -7,8 +7,8 @@
 
 (defconfig package
   (mapc (lambda (x) (add-to-list 'package-archives x))
-	'(("marmalade" . "http://marmalade-repo.org/packages/")
-	  ("melpa"     . "http://melpa.milkbox.net/packages/")))
+        '(("marmalade" . "http://marmalade-repo.org/packages/")
+          ("melpa"     . "http://melpa.milkbox.net/packages/")))
   (package-initialize))
 
 (defconfig color-theme now
