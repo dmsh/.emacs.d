@@ -11,6 +11,7 @@
           ("melpa"     . "http://melpa.milkbox.net/packages/")))
   (package-initialize))
 
-(defconfig color-theme now
-  (when (require 'tango+ nil t)
-    (color-theme-tango+)))
+(defconfig custom now
+  (mapc (lambda (dir) (add-to-list 'custom-theme-load-path dir))
+        (directory-files (dotemacs-path "themes") t "^[^\\.]"))
+  (load-theme 'tango+ t))
