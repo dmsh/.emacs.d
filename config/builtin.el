@@ -15,3 +15,6 @@
   (mapc (lambda (dir) (add-to-list 'custom-theme-load-path dir))
         (directory-files (dotemacs-path "themes") t "^[^\\.]"))
   (load-theme 'tango+ t))
+
+(defconfig simple
+  (setq visual-line-fringe-indicators '(nil right-curly-arrow)))
