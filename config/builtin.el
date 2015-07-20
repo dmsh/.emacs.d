@@ -1,6 +1,8 @@
 (defconfig ido now
   (ido-mode)
-  (setq ido-enable-flex-matching t))
+  (setq ido-enable-flex-matching t)
+  (setq ido-default-buffer-method 'selected-window)
+  (setq ido-default-file-method 'selected-window))
 
 (defconfig uniquify now
   (setq uniquify-buffer-name-style 'post-forward))
