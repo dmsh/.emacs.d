@@ -20,3 +20,7 @@
 
 (defconfig simple
   (setq visual-line-fringe-indicators '(nil right-curly-arrow)))
+
+(global-set-key (kbd "C-c m") 'man)
+(defconfig man
+  (setq Man-switches "--no-hyphenation --no-justification"))
