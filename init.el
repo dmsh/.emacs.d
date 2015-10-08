@@ -6,5 +6,6 @@
 
 (load-path-prepend-recursive (dotemacs-path "lisp"))
 (load-path-prepend-recursive (dotemacs-path "lisp-ext"))
+(load-path-prepend-recursive (dotemacs-path "elpa"))
 
 (cfg-load-dir (dotemacs-path "config"))

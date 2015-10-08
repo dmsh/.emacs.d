@@ -12,7 +12,7 @@
   (let* ((now (eq 'now (car body)))
          (body (if now (cdr body) body)))
     `(progn
-       ,(if now `(require ',feature) '(progn))
+       ,(if now `(require ',feature nil t) '(progn))
        (eval-after-load ',feature '(progn ,@body)))))
 
 (defun cfg-list-files (dir)

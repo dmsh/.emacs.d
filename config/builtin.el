@@ -7,7 +7,7 @@
 (defconfig uniquify now
   (setq uniquify-buffer-name-style 'post-forward))
 
-(defconfig package
+(defconfig package now
   (mapc (lambda (x) (add-to-list 'package-archives x))
         '(("marmalade" . "http://marmalade-repo.org/packages/")
           ("melpa"     . "http://melpa.milkbox.net/packages/")))
