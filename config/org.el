@@ -1,4 +1,6 @@
-(defconfig org
+(use-package org
+  :defer t
+  :config
   (setq org-startup-indented t)
   (setq org-src-preserve-indentation t
         org-src-fontify-natively t)

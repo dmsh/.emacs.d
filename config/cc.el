@@ -1,4 +1,6 @@
-(defconfig cc-mode
+(use-package cc-mode
+  :defer t
+  :config
 ;;  (add-hook 'c-mode-common-hook
 ;;          (lambda ()
   (c-add-style "linux-tabs-only"
