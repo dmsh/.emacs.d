@@ -6,8 +6,8 @@
 
 (defun load-path-prepend-recursive (dir)
   (let ((default-directory dir))
-    (setq load-path (append (load-path-recursive-dirs) load-path))))
-
+    (mapc (lambda (x) (add-to-list 'load-path x))
+          (load-path-recursive-dirs))))
 
 (defun cfg-list-files (dir)
   (when (file-exists-p dir)
