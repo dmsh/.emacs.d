@@ -8,12 +8,6 @@
   (let ((default-directory dir))
     (setq load-path (append (load-path-recursive-dirs) load-path))))
 
-(defmacro defconfig (feature &rest body)
-  (let* ((now (eq 'now (car body)))
-         (body (if now (cdr body) body)))
-    `(progn
-       ,(if now `(require ',feature nil t) '(progn))
-       (eval-after-load ',feature '(progn ,@body)))))
 
 (defun cfg-list-files (dir)
   (when (file-exists-p dir)
