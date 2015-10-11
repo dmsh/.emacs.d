@@ -4,7 +4,7 @@
 
 (load (dotemacs-path "util.el"))
 
-(load-path-prepend-recursive (dotemacs-path "lisp-ext/use-package"))
+(load-path-prepend (dotemacs-path "lisp-ext/use-package"))
 (require 'use-package)
 
 (load-path-prepend-recursive (dotemacs-path "lisp"))
