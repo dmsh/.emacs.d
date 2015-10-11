@@ -2,7 +2,7 @@
   (concat user-emacs-directory
           (convert-standard-filename dir)))
 
-(load (dotemacs-path "util"))
+(load (dotemacs-path "util.el"))
 
 (require 'use-package)
 
