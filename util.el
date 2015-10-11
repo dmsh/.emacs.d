@@ -4,10 +4,12 @@
      (copy-sequence (normal-top-level-add-to-load-path '(".")))
      (normal-top-level-add-subdirs-to-load-path))))
 
+(defun load-path-prepend (dir)
+  (add-to-list 'load-path dir))
+
 (defun load-path-prepend-recursive (dir)
   (let ((default-directory dir))
-    (mapc (lambda (x) (add-to-list 'load-path x))
-          (load-path-recursive-dirs))))
+    (mapc #'load-path-prepend (load-path-recursive-dirs))))
 
 (defun cfg-list-files (dir)
   (when (file-exists-p dir)
