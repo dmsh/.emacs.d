@@ -1,6 +1,5 @@
 (defun dotemacs-path (dir)
-  (concat user-emacs-directory
-          (convert-standard-filename dir)))
+  (expand-file-name dir user-emacs-directory))
 
 (load (dotemacs-path "util.el"))
 
