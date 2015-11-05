@@ -44,3 +44,7 @@
   :bind ("C-c m" . man)
   :config
   (setq Man-switches "--no-hyphenation --no-justification"))
+
+(use-package paren
+  :config
+  (show-paren-mode t))
