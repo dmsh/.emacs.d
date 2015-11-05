@@ -1,23 +1,22 @@
 (use-package cc-mode
   :defer t
   :config
-;;  (add-hook 'c-mode-common-hook
-;;          (lambda ()
-  (c-add-style "linux-tabs-only"
-               '("linux"
-                 (tab-width . 8)
-                 (indent-tabs-mode . t)
-                 (c-offsets-alist
-                  (arglist-cont-nonempty
-                   c-lineup-gcc-asm-reg
-                   c-lineup-arglist-tabs-only))))
-  (c-add-style "strongswan"
-               '((tab-width . 4)
-                 (indent-tabs-mode . t)
-                 (c-basic-offset . 4)
-                 (c-offsets-alist . ((substatement-open . 0)
-                                     (case-label . +)
-                                     (label . 0)))))
+  (c-add-style
+   "linux-tabs-only"
+   '("linux"
+     (tab-width . 8)
+     (indent-tabs-mode . t)
+     (c-offsets-alist . ((arglist-cont-nonempty . (c-lineup-gcc-asm-reg
+                                                   c-lineup-arglist-tabs-only)))))))
+
+  (c-add-style
+   "strongswan"
+   '((tab-width . 4)
+     (indent-tabs-mode . t)
+     (c-basic-offset . 4)
+     (c-offsets-alist . ((substatement-open . 0)
+                         (case-label . +)
+                         (label . 0)))))
 
   (add-hook 'c-mode-hook
             (lambda ()
