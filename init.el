@@ -137,7 +137,7 @@
      (tab-width . 8)
      (indent-tabs-mode . t)
      (c-offsets-alist . ((arglist-cont-nonempty . (c-lineup-gcc-asm-reg
-                                                   c-lineup-arglist-tabs-only)))))))
+                                                   c-lineup-arglist-tabs-only))))))
 
   (c-add-style
    "strongswan"
