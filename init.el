@@ -19,7 +19,6 @@
 (setq make-backup-files nil)
 (defalias 'yes-or-no-p 'y-or-n-p)
 (delete-selection-mode t)
-(column-number-mode t)
 (add-to-list 'default-frame-alist '(font . "Monospace-11"))
 ;;(set-default-font "Monospace-11")
 ;;(set-face-attribute 'default nil :height 110)
@@ -73,6 +72,7 @@
 
 (use-package simple
   :config
+  (column-number-mode t)
   (setq visual-line-fringe-indicators '(nil right-curly-arrow)))
 
 (use-package man
