@@ -95,10 +95,12 @@
   (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation))
 
 ;;; OCaml
-(with-temp-buffer
-  (insert (shell-command-to-string
-           "ocp-edit-mode emacs -load-global-config"))
-  (eval-buffer))
+(condition-case nil                     ; FIXME!
+    (with-temp-buffer
+      (insert (shell-command-to-string
+               "ocp-edit-mode emacs -load-global-config"))
+      (eval-buffer))
+  (error nil))
 
 (use-package org
   :defer t
